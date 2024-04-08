@@ -19,7 +19,7 @@ html,body{
 }
 
 body{
-    background: var(--cor01) url(imagens/c837a6_02de7d4c43d44b7b890854049ed75da8f000.webp) center center no-repeat fixed;
+    background: var(--cor01) url(../imagens/c837a6_02de7d4c43d44b7b890854049ed75da8f000.webp) center center no-repeat fixed;
     background-size: cover;
     font-family: var(--font-menu),sans-serif;  
 }
