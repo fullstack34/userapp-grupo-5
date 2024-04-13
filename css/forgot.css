@@ -102,3 +102,15 @@ button:hover{
     border-color: black;
     color: black;
 }
+
+a{
+    color: rgba(255, 255, 255, 0.842);
+    text-align: left;
+    width: 100%;
+    margin-left: 10px;
+}
+
+a:hover{
+    color: rgba(224, 224, 224, 0.644);
+    
+}
