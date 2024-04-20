@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <title>W E B W I S E - Dashboard</title>
@@ -40,9 +39,9 @@
 
         <ul class="menu-links">
           <li class="nav-link">
-            <a href="address-form.html">
-              <i class="fa-regular fa-compass icon"></i>
-              <span class="text nav-text">Cadastro endereço</span>
+            <a href="address-form.html" id="cadastro-endereco">
+              <i class="fa-regular fa-compass icon" id="cadastro-endereco"></i>
+              <span class="text nav-text" id="cadastro-endereco">Cadastro endereço</span>
             </a>
           </li>
 
@@ -111,10 +110,198 @@
   <!-- FIM - DASHBOARD MENU -->
 
   <section class="home">
+    <div class="home-menu">
+
+      <div class="menu1-logo">
+        <a href="">
+          <h1>WEBWISE</h1>
+        </a>
+        <p>Current Amount</p>
+      </div>
+      <div class="menu1-tecno">
+        <div>
+          <div id="principal">
+            <div class="direita"></div>
+            <span>Visão</span>
+          </div>
+          <i class="fa-solid fa-arrow-up"></i>
+        </div>
+        <div>
+          <div id="principal">
+            <div class="esquerda"></div>
+            <span>Serviços </span>
+          </div>
+          <i class="fa-solid fa-arrow-up"></i>
+        </div>
+      </div>
+
+      <div class="menu1-credits">
+        <div class="itens">
+          <div id="principal">
+            <h2>Credit Limits</h2>
+            <span>$128 - $2013</span>
+          </div>
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="itens">
+          <div id="principal">
+            <h2>Online Limits</h2>
+            <span>$321 - $1,234</span>
+          </div>
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+
+      <div class="menu1-parceiros">
+        <h1 id="devs">Nossos devs</h1>
+        
+        
+        <div class="parceiros">
+          <img src="imagens/zero.jpeg" alt="">
+          <div class="nome-parceiros">
+            <h1>Zero</h1>
+            <span><a href="https://github.com/zero0O2" target="_blank">Github.com</a></span>
+          </div>
+        </div>
+        <div class="parceiros">
+          <img src="imagens/eduardo.png" alt="">
+          <div class="nome-parceiros">
+            <h1>Eduardo Caires</h1>
+            <span><a href="https://github.com/EduardoCairesSilva" target="_blank">Github.com</a></span>
+          </div>
+        </div>
+        
+
+        <div class="parceiros">
+          <img src="imagens/romulo.png" alt="">
+          <div class="nome-parceiros">
+            <h1>Rômulo Aquila</h1>
+            <span><a href="https://github.com/romuloaquila" target="_blank">Github.com</a></span>
+          </div>
+        </div>
+
+        <div class="parceiros">
+          <img src="imagens/adolfo.png" alt="">
+          <div class="nome-parceiros">
+            <h1>Adolfo</h1>
+            <span><a href="https://github.com/Adolfofullstack" target="_blank">Github.com</a></span>
+          </div>
+        </div>
+
+        <button class="ViewAllInovoice">View All Inovoice</button>
+      </div>
     <div class="text">
       <a href="">W E B W I S E</a>
+
     </div>
+
+    <section class="dashboard">
+
+      <div class="titulo">
+        <h2>WEBWISE</h2>
+        <h1>Dashboard</h1>
+      </div>
+
+      <div class="total-endereços">
+        <div class="opiçoes">
+          <div>
+            <h1>Endereços</h1>
+            <p>Total de Endereços cadastrados</p>
+          </div>
+          <label for="">
+            <p>Opiçoes</p>
+            <i class="fa-solid fa-chevron-right"></i>
+          </label>
+        </div>
+
+        <div class="total">
+          <span><strong>250</strong>
+            <div class="linha-endereco"></div>
+            <div class="linha-endereco-v" id="l1">
+            </div>
+            <div class="linha-endereco-v" id="l6">
+            </div>
+          </span>
+          <span>200
+            <div class="linha-endereco"></div>
+              <div class="linha-endereco-v" id="l7">
+              </div>
+            <div class="linha-endereco-v" id="l2">
+            </div>
+              
+            </span>
+            <span>100
+              <div class="linha-endereco"></div>
+              <div class="linha-endereco-v" id="l3">
+              </div>
+          </span>
+          <span>0
+            <div class="linha-endereco"></div>
+            <div class="linha-endereco-v" id="l4">
+            </div>
+            <div class="linha-endereco-v" id="l5">
+            </div>
+          </span>
+        </div>
+
+      </div>
+      <div class="expancao-itens">
+        <div class="total-enderecos24">
+          <h1>Endereços 24h</h1>
+          <span>25</span>
+        </div>
+        <div class="total-usuarios">
+          <span>
+            <h1>Usuarios <br>24h</h1>
+            <p>5</p>
+          </span>
+        </div>
+      </div>
+
+      <div class="usuarios">
+        <div class="usuarios-t">
+          <h1>Total de usuarios logados.</h1>
+          <p>50</p>
+        </div>
+        <div class="abordagem">
+          <p>Uma abordagem diferente, com um novo método de produção.</p>
+          <img src="imagens/84770f_3cc097e7503b4ed498e350c6618ef956~mv2.webp" alt="">
+        </div>
+      </div>
+
+    </section>
+
+    <section class="dashboard-user">
+      <div class="user-profile">
+        <i class="fa-regular fa-bell"></i>
+        <img src="imagens/profile-perfil.jpg" alt="">
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="tecno-autono">
+        <div class="tecno-text">
+          <h1>EFICIÊNCIA</h1>
+          <p>Com inovadora tecnologia de sensor habilitada pela percepção, o Autono é um veículo totalmente sem motorista criado para oferecer precisão e segurança. É a nova era da direção autônoma.</p>
+        </div>
+        <img src="imagens/eletrico-frente.webp" alt="">
+      </div>
+      <div>
+      <div class="tecno-autono2">
+        <div class="tecno-text2">
+          <h1>
+            PRODUTOS DIGITAIS WEBWISE</h1>
+          <p>Criamos um aplicativo para que cada veículo dirija com autonomia e tome decisões baseadas em percepção situacional e informações ao vivo.</p>
+        </div>
+        <img src="imagens/visu-eletrico.webp" alt="">
+      </div>
+      <div>
+
+      </div>
+    </section>
+
+
+
   </section>
+  
   <script src="script.js"></script>
 
 </body>
