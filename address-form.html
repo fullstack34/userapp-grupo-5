@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="address-style.css">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
+    <link rel='stylesheet'
+      href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="address-style-menu.css">  
+    <title>Cadastro de endereço</title>
+</head>
+<body>
+     <!-- INICIO - DASHBOARD MENU -->
+  <nav class="sidebar close">
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="imagens/imagem-perfil.png" alt="">
+        </span>
+
+        <div class="text logo-text">
+          <span class="name">Grupo 05 </span>
+          <span class="profession">Devs Web </span>
+        </div>
+      </div>
+
+      <i class='bx bx-chevron-right toggle'></i>
+    </header>
+
+    <div class="menu-bar">
+      <div class="menu">
+
+        <li class="search-box">
+          <i class='bx bx-search icon'></i>
+          <input type="text" placeholder="Pesquisar...">
+        </li>
+
+        <ul class="menu-links">
+          <li class="nav-link02">
+            <a href="">
+              <i class="fa-regular fa-compass icon" id="cadastro-endereco"></i>
+              <span class="text2 nav-text">Cadastro endereço</span>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="address-list.html">
+              <i class="fa-regular fa-address-book icon"></i>
+              <span class="text nav-text">Listar endereço</span>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="#">
+              <i class='bx bx-bell icon'></i>
+              <span class="text nav-text">Notificações</span>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="#">
+              <i class='bx bx-pie-chart-alt icon'></i>
+              <span class="text nav-text">Análises</span>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="#">
+              <i class='bx bx-heart icon'></i>
+              <span class="text nav-text">Curtidas</span>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="#">
+              <i class='bx bx-cog icon'></i>
+              <span class="text nav-text">Configurações</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="bottom-content">
+        <li class="">
+          <a href="#">
+            <i class='bx bx-log-out icon'></i>
+            <span class="text nav-text">Sair</span>
+          </a>
+        </li>
+
+        <li class="mode">
+          <div class="sol-lua">
+            <!-- <i class='bx bx-moon icon moon'></i>
+            <i class='bx bx-sun icon sun'></i> -->
+          </div>
+          <span class="mode-text text">Modo escuro</span>
+
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+
+      </div>
+    </div>
+
+  </nav>
+  <!-- FIM - DASHBOARD MENU -->
+  <script src="script.js"></script>
+
+    <div class="container">
+        <picture>
+            <img src="Imagens/undraw_my_location_re_r52x (1).svg" alt="my_location">
+        </picture>
+        <form action="" class="form-content">
+            <h1>Cadastre seu Endereço</h1>
+            <hr>
+    <div class="register-fields">
+        <div class="input-field">
+            <input type="text" name="CEP" id="cep" placeholder="00000-000" maxlength="8"
+                autocomplete="off" required>
+            <label for="cep">CEP</label>
+        </div>
+        <div class="input-field">
+            <input type="text" name="Rua" id="rua" autocomplete="off" placeholder="Rua ou Avenida" required> 
+            <label for="rua">Rua</label>
+        </div>
+    </div>
+    <div class="register-fields">
+        <div class="input-field">
+            <input type="text" name="Bairro" id="bairro" autocomplete="off" placeholder="Nome do bairro" required>
+            <label for="bairro">Bairro</label>
+        </div>
+        <div class="input-field">
+            <input type="text" name="cidade" id="city" autocomplete="off" placeholder="Ex.: (Fortaleza)" required>
+            <label for="city">Cidade</label>
+        </div>
+    </div>
+    <div class="register-fields">
+        <div class="input-field">
+            <input type="text" name="Uf" id="uf" placeholder="XX" maxlength="2" autocomplete="off" required>
+            <label for="uf">UF</label>
+        </div>
+        <div class="input-field">
+            <input type="number" name="numero" id="number"
+            placeholder="(00) 0000-0000" autocomplete="off" required>
+            <label for="number">Celular</label>
+        </div>
+    </div>
+        <div class="input-field">
+            <input type="text" name="complemento" id="complement" 
+            placeholder="Casa , Apto, Loja" autocomplete="off" required>
+            <label for="complement">Complemento</label>
+        </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+    
+</body>
+</html>
