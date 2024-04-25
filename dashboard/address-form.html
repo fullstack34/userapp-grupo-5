@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
-    <link rel='stylesheet'
-      href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="css/address-style.css">
-    <link rel="stylesheet" href="css/address-style-menu.css">  
-    <title>Cadastro de endereço</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
+  <link rel='stylesheet'
+    href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/address-style.css">
+  <link rel="stylesheet" href="css/address-style-menu.css">
+  <title>Cadastro de endereço</title>
 </head>
+
 <body>
-     <!-- INICIO - DASHBOARD MENU -->
+  <!-- INICIO - DASHBOARD MENU -->
   <nav class="sidebar close">
     <header>
       <div class="image-text">
@@ -86,7 +88,7 @@
 
       <div class="bottom-content">
         <li class="">
-          <a href="#">
+          <a href="index.html">
             <i class='bx bx-log-out icon'></i>
             <span class="text nav-text">Sair</span>
           </a>
@@ -94,8 +96,8 @@
 
         <li class="mode">
           <div class="sol-lua">
-            <!-- <i class='bx bx-moon icon moon'></i>
-            <i class='bx bx-sun icon sun'></i> -->
+            <i class='bx bx-moon icon moon'></i>
+            <i class='bx bx-sun icon sun'></i>
           </div>
           <span class="mode-text text">Modo escuro</span>
 
@@ -110,55 +112,54 @@
   </nav>
   <!-- FIM - DASHBOARD MENU -->
 
-    <div class="container">
-        <picture>
-            <img src="imagens/image.png" alt="my_location">
-        </picture>
-        <form action="" class="form-content">
-            <h1>Cadastre seu Endereço</h1>
-            <hr>
-    <div class="register-fields">
+  <div class="container">
+    <picture>
+      <img src="imagens/image.png" alt="my_location">
+    </picture>
+    <form action="" class="form-content">
+      <h1>Cadastre seu Endereço</h1>
+      <hr>
+      <div class="register-fields">
         <div class="input-field">
-            <input type="text" name="CEP" id="cep" placeholder="00000-000" maxlength="8"
-                autocomplete="off" required>
-            <label for="cep">CEP</label>
+          <input type="text" name="CEP" id="cep" placeholder="00000-000" maxlength="8" autocomplete="off" required>
+          <label for="cep">CEP</label>
         </div>
         <div class="input-field">
-            <input type="text" name="Rua" id="rua" autocomplete="off" placeholder="Rua ou Avenida" required> 
-            <label for="rua">Rua</label>
+          <input type="text" name="Rua" id="rua" autocomplete="off" placeholder="Rua ou Avenida" required>
+          <label for="rua">Rua</label>
         </div>
-    </div>
-    <div class="register-fields">
+      </div>
+      <div class="register-fields">
         <div class="input-field">
-            <input type="text" name="Bairro" id="bairro" autocomplete="off" placeholder="Nome do bairro" required>
-            <label for="bairro">Bairro</label>
-        </div>
-        <div class="input-field">
-            <input type="text" name="cidade" id="city" autocomplete="off" placeholder="Ex.: (Fortaleza)" required>
-            <label for="city">Cidade</label>
-        </div>
-    </div>
-    <div class="register-fields">
-        <div class="input-field">
-            <input type="text" name="Uf" id="uf" placeholder="XX" maxlength="2" autocomplete="off" required>
-            <label for="uf">UF</label>
+          <input type="text" name="Bairro" id="bairro" autocomplete="off" placeholder="Nome do bairro" required>
+          <label for="bairro">Bairro</label>
         </div>
         <div class="input-field">
-            <input type="number" name="numero" id="number"
-            placeholder="(00) 0000-0000" autocomplete="off" required>
-            <label for="number">Celular</label>
+          <input type="text" name="cidade" id="city" autocomplete="off" placeholder="Ex.: (Fortaleza)" required>
+          <label for="city">Cidade</label>
         </div>
-    </div>
+      </div>
+      <div class="register-fields">
         <div class="input-field">
-            <input type="text" name="complemento" id="complement" 
-            placeholder="Casa , Apto, Loja" autocomplete="off" required>
-            <label for="complement">Complemento</label>
+          <input type="text" name="Uf" id="uf" placeholder="XX" maxlength="2" autocomplete="off" required>
+          <label for="uf">UF</label>
         </div>
-            <button type="submit">Cadastrar</button>
-        </form>
-    </div>
+        <div class="input-field">
+          <input type="number" name="numero" id="number" placeholder="(00) 0000-0000" autocomplete="off" required>
+          <label for="number">Celular</label>
+        </div>
+      </div>
+      <div class="input-field">
+        <input type="text" name="complemento" id="complement" placeholder="Casa , Apto, Loja" autocomplete="off"
+          required>
+        <label for="complement">Complemento</label>
+      </div>
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
 
-    <script src="js/script.js"></script>
-    
+  <script src="js/script.js"></script>
+
 </body>
+
 </html>
