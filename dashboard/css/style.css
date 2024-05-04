@@ -956,19 +956,33 @@ body.dark .switch::before {
 
 /* ========= RESPONSIVIDADE ========= */
 
+::-webkit-scrollbar{
+  background-color: transparent;
+  width: 4px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(55, 55, 55);
+  border-radius: 5px;
+}
+
 @media (max-width:1400px) {
 
   .dashboard-user{
     justify-content: space-around;
   }
 
+  
+  .user-profile{
+    top: 10px;
+  }
+
   .dashboard-user .tecno-autono ,
   .dashboard-user .tecno-autono2 {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 10px 20px;
-    height: 300px;
+    width: 90%;
+    padding: 10px 10px;
+    height: 240px;
     margin: 0;
   }
 
@@ -981,7 +995,7 @@ body.dark .switch::before {
     display: flex;
     flex-direction: column;
     width: 100%;
-    overflow: hidden;
+    overflow-y: scroll;
   }
 
   .dashboard-user .tecno-autono img,
