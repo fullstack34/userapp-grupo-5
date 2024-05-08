@@ -16,9 +16,8 @@
   --toggle-color-light: rgb(95, 95, 95);
   --shadow-box-color: rgba(0, 0, 0, 0.26);
   --text-color: #707070;
-  --gradient-color-01: #E0C3FC;
-  --gradient-color-02: #8EC5FC;
-
+  --gradient-color-01: #e0c3fc;
+  --gradient-color-02: #8ec5fc;
 
   /* ====== Transição ====== */
   --tran-03: all 0.2s ease;
@@ -31,6 +30,8 @@ body {
   min-height: 100vh;
   background-color: var(--body-color);
   transition: var(--tran-05);
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
 ::selection {
@@ -48,8 +49,8 @@ body.dark {
   --toggle-color-light: #fff;
   --shadow-box-color: rgba(255, 255, 255, 0.26);
   --text-color: white;
-  --gradient-color-01: #2B86C5;
-  --gradient-color-02: #784BA0;
+  --gradient-color-01: #2b86c5;
+  --gradient-color-02: #784ba0;
 }
 
 /* ===== INICIO SIDEBAR ===== */
@@ -83,14 +84,13 @@ body.dark {
 }
 
 .nav-link02 .text2 {
-  color: var(--sidebar-color)
+  color: var(--sidebar-color);
 }
 
 .sidebar li a span#cadastro-endereco,
 .sidebar li a i#cadastro-endereco {
   color: var(--sidebar-color);
 }
-
 
 .sidebar header .image,
 .sidebar .icon {
@@ -224,7 +224,6 @@ header .image-text .profession {
   transition: var(--tran-03);
 }
 
-
 .sidebar li a:hover {
   background-color: var(--toggle-color);
 }
@@ -336,7 +335,7 @@ body.dark .switch::before {
   text-decoration: none;
 }
 
-.sidebar.close~.home {
+.sidebar.close ~ .home {
   left: 78px;
   height: 100vh;
   width: calc(100% - 78px);
@@ -348,10 +347,122 @@ body.dark .home .text {
 
 /* ============= TABELA ============= */
 
-.table>:not(caption)>*>* {
+.table > :not(caption) > * > * {
   padding: 1.5rem 0.5rem;
-  color: var(--bs-table-color-state, var(--bs-table-color-type, var(--bs-table-color)));
+  color: var(
+    --bs-table-color-state,
+    var(--bs-table-color-type, var(--bs-table-color))
+  );
   background-color: var(--bs-table-bg);
   border-bottom-width: var(--bs-border-width);
-  box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));
+  box-shadow: inset 0 0 0 9999px
+    var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100vw;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+th,
+td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f5f3f3;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+.action-cell {
+  text-align: center;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-edit {
+  background-color: #1f51da;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+body.dark {
+  background-color: #18191a;
+  color: #fff;
+}
+
+body.dark table {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark th {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark tr:hover {
+  background-color: #555;
+}
+
+body.dark .btn-edit {
+  background-color: #1f51da;
+  color: white;
+}
+body.dark .btn-delete {
+  background-color: #f44336;
+  color: white;
+}
+
+body.dark .btn:hover {
+  background-color: #ddd;
+}
+
+/* Media queries (Tornando responsivo) */
+@media (max-width: 575.98px) {
+  body.dark .table-container {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body.dark .table-container {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body.dark .table-container {
+    margin-bottom: 20px;
+  }
 }
