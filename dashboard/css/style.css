@@ -332,7 +332,6 @@ body.dark .switch::before {
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: 100%;
   padding: 20px 30px;
   background-color: var(--body-color);
 }
@@ -858,7 +857,6 @@ body.dark .switch::before {
   display: flex;
   flex-direction: column;
   width: 45%;
-  height: 100vh;
   padding: 20px 30px;
   background-color: var(--body-color);
 }
@@ -1023,6 +1021,8 @@ body.dark .switch::before {
 }
 
 @media (max-width:1400px) {
+
+
 
   .dashboard-user{
     justify-content: space-around;
