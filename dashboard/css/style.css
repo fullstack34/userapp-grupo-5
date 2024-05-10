@@ -46,6 +46,7 @@ body.dark {
   --primary-color-light: #3a3b3c;
   --toggle-color: #fff;
   --text-color: #ccc;
+  color: white;
 }
 
 /* ===== INICIO SIDEBAR ===== */
@@ -331,7 +332,6 @@ body.dark .switch::before {
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: 100vh;
   padding: 20px 30px;
   background-color: var(--body-color);
 }
@@ -349,6 +349,11 @@ body.dark .switch::before {
   font-family: var(--font-montserrat);
   letter-spacing: 5px;
   font-weight: 700;
+}
+
+.dark .home .home-menu .menu1-logo h1{
+  color: white;
+
 }
 
 .home .home-menu .menu1-logo p{
@@ -383,6 +388,8 @@ body.dark .switch::before {
   transform: rotate(30deg);
   animation: carregamento-circulo-direito 5.5s ;
 }
+
+
 .home-menu .menu1-tecno div .principal .esquerda{
   width: 35px;
   height: 35px;
@@ -397,11 +404,21 @@ body.dark .switch::before {
   font-size: 16px;
   margin: 0 10px;
 }
+.dark .home-menu .menu1-tecno div .principal span{
+  color: white;
+}
 
 .home-menu .menu1-tecno div i{
   font-size: 16px;
   transform: rotate(50deg)
 }
+
+.dark .home-menu .menu1-tecno div i{
+  color: white;
+  font-size: 15px;
+}
+
+
 
 /* ========================== */
 
@@ -420,6 +437,9 @@ body.dark .switch::before {
   padding: 8px 17px;
   margin: 6px 0;
   transition: all 0.3s;
+}
+.dark .menu1-credits .itens{
+  background-color: #000000;
 }
 
 .menu1-credits .itens:hover{
@@ -481,6 +501,11 @@ body.dark .switch::before {
   margin-right: 10px;
 }
 
+.dark .menu1-parceiros .parceiros img{
+  border: 3px solid black;
+
+}
+
 .menu1-parceiros .parceiros .nome-parceiros{
   display: flex;
   flex-direction: column;
@@ -513,6 +538,11 @@ body.dark .switch::before {
   outline: none;
   border-radius: 4px;
   transition: all .2s;
+}
+.dark .menu1-parceiros .ViewAllInovoice{
+  background-color:#000000 ;
+  color: white;
+
 }
 
 .menu1-parceiros .ViewAllInovoice:hover{
@@ -580,10 +610,9 @@ body.dark .switch::before {
   align-items: center;
   height: 50px;
   width: 110px;
-  padding: 5px 58px;
   border-radius: 8px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.104);
-  justify-content: space-evenly;
+  justify-content: center;
   background-color: var(--sidebar-color);
 }
 
@@ -618,6 +647,9 @@ body.dark .switch::before {
   width: 35px;
   height: 100%;
   background-color: var(--primary-color);
+}
+.dark .dashboard .total-endereços .total span{
+  background-color: black;
 }
 
 /* ============================================= */
@@ -756,6 +788,12 @@ body.dark .switch::before {
   padding: 10px 20px;
   position: relative;
 }
+.dark .dashboard .expancao-itens .total-usuarios,
+.dashboard .expancao-itens .total-enderecos24{
+  background-color: #000000;
+  color: white;
+
+}
 .dashboard .expancao-itens .total-usuarios h1{
   font-size: 30px;
   font-family: var(--font-montserrat);
@@ -798,6 +836,14 @@ body.dark .switch::before {
   display: flex;
 }
 
+.dark .dashboard .usuarios .abordagem{
+  overflow-y: scroll;
+  background-color: white;
+  color: #000000;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
 .dashboard .usuarios .abordagem img{
   width: 140px;
   height: 140px;
@@ -811,7 +857,6 @@ body.dark .switch::before {
   display: flex;
   flex-direction: column;
   width: 45%;
-  height: 100vh;
   padding: 20px 30px;
   background-color: var(--body-color);
 }
@@ -875,9 +920,14 @@ body.dark .switch::before {
   overflow: hidden;
   border-radius: 10px;
 }
+.dark .dashboard-user .tecno-autono{
+  background-color:  black;
+  color: white;
+}
 
 .dashboard-user .tecno-autono .tecno-text{
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   width: 60%;
 }
@@ -907,6 +957,11 @@ body.dark .switch::before {
   height: 250px;
   overflow: hidden;
   border-radius: 10px;
+}
+
+.dark .dashboard-user .tecno-autono2{
+  background-color:  white;
+  color: black;
 }
 
 .dashboard-user .tecno-autono2 .tecno-text2{
@@ -966,6 +1021,8 @@ body.dark .switch::before {
 }
 
 @media (max-width:1400px) {
+
+
 
   .dashboard-user{
     justify-content: space-around;
