@@ -9,6 +9,7 @@
   <link rel='stylesheet'
     href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/address-style.css">
   <link rel="stylesheet" href="css/address-style-menu.css">
   <title>Cadastro de endereço</title>
@@ -16,99 +17,77 @@
 
 <body>
   <!-- INICIO - DASHBOARD MENU -->
-  <nav class="sidebar close">
-    <header>
-      <div class="image-text">
-        <span class="image">
-          <img src="imagens/imagem-perfil.png" alt="">
-        </span>
+  <nav class="navbar navbar-expand-sm sidebar">
 
-        <div class="text logo-text">
-          <span class="name">Grupo 05 </span>
-          <span class="profession">Devs Web </span>
-        </div>
-      </div>
+    <div class="collapse navbar-collapse" id="nav-target">
+      <div>
 
-      <i class='bx bx-chevron-right toggle'></i>
-    </header>
+        <ul class="navbar-nav ml-auto">
 
-    <div class="menu-bar">
-      <div class="menu">
-
-        <li class="search-box">
-          <i class='bx bx-search icon'></i>
-          <input type="text" placeholder="Pesquisar...">
-        </li>
-
-        <ul class="menu-links">
-          <li class="nav-link02">
-            <a href="">
-              <i class="fa-regular fa-compass icon" id="cadastro-endereco"></i>
-              <span class="text2 nav-text">Cadastro endereço</span>
+          <li class="nav-link nav-item">
+            <a href="" class="nav-link">
+              <span class="text nav-text">W E B W I S E</a></span>
             </a>
           </li>
 
-          <li class="nav-link">
-            <a href="address-list.html">
+          <li class="nav-link nav-item">
+            <a href="address-form.html" class="nav-link">
+              <i class="fa-regular fa-compass icon"></i>
+              <span class="text nav-text">Cadastro endereço</span>
+            </a>
+          </li>
+
+          <li class="nav-link nav-item">
+            <a href="address-list.html" class="nav-link">
               <i class="fa-regular fa-address-book icon"></i>
               <span class="text nav-text">Listar endereço</span>
             </a>
           </li>
 
-          <li class="nav-link">
-            <a href="#">
-              <i class='bx bx-bell icon'></i>
+          <li class="nav-link nav-item">
+            <a href="#" class="nav-link">
+              <i class="bx bx-bell icon"></i>
               <span class="text nav-text">Notificações</span>
             </a>
           </li>
 
-          <li class="nav-link">
-            <a href="#">
-              <i class='bx bx-pie-chart-alt icon'></i>
+          <li class="nav-link nav-item">
+            <a href="#" class="nav-link">
+              <i class="bx bx-pie-chart-alt icon"></i>
               <span class="text nav-text">Análises</span>
             </a>
           </li>
 
-          <li class="nav-link">
-            <a href="#">
-              <i class='bx bx-heart icon'></i>
+          <li class="nav-link nav-item">
+            <a href="#" class="nav-link">
+              <i class="bx bx-heart icon"></i>
               <span class="text nav-text">Curtidas</span>
             </a>
           </li>
 
-          <li class="nav-link">
-            <a href="#">
-              <i class='bx bx-cog icon'></i>
+          <li class="nav-link nav-item">
+            <a href="#" class="nav-link">
+              <i class="bx bx-cog icon"></i>
               <span class="text nav-text">Configurações</span>
             </a>
           </li>
 
+          <li class="nav-link nav-item">
+            <a href="/dashboard/index.html" class="nav-link">
+              <i class="bx bx-log-out icon"></i>
+              <span class="text nav-text">Retornar</span>
+            </a>
+          </li>
+
+          <li class="mode nav-link nav-item">
+            <span class="mode-text">Modo escuro</span>
+            <div class="toggle-switch">
+              <span class="toggle-switch switch"></span>
+            </div>
+          </li>
         </ul>
       </div>
-
-      <div class="bottom-content">
-        <li class="">
-          <a href="index.html">
-            <i class='bx bx-log-out icon'></i>
-            <span class="text nav-text">Sair</span>
-          </a>
-        </li>
-
-        <li class="mode">
-          <div class="sol-lua">
-            <i class='bx bx-moon icon moon'></i>
-            <i class='bx bx-sun icon sun'></i>
-          </div>
-          <span class="mode-text text">Modo escuro</span>
-
-          <div class="toggle-switch">
-            <span class="switch"></span>
-          </div>
-        </li>
-
-      </div>
     </div>
-
   </nav>
   <!-- FIM - DASHBOARD MENU -->
 
@@ -159,6 +138,8 @@
   </div>
 
   <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 

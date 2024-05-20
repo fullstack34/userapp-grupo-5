@@ -9,17 +9,47 @@
     /* font-family: "Open Sans", sans-serif; */
 }
 
+:root {
+    /* ===== Cores ===== */
+    --body-color: #e4e9f7;
+    --sidebar-color: #fff;
+    --primary-color2: #ffffff;
+    --primary-color-light: #f6f5ff;
+    --toggle-color: rgb(20, 20, 20);
+    --switch-mode-color: #ddd;
+    --toggle-color-light: rgb(95, 95, 95);
+    --shadow-box-color: rgba(0, 0, 0, 0.26);
+    --text-color: #707070;
+    --gradient-color-01: #E0C3FC;
+    --gradient-color-02: #8EC5FC;
+
+
+    /* ====== Transição ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body.dark {
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --switch-mode-color: rgb(245, 245, 245);
+    --toggle-color-light: #fff;
+    --shadow-box-color: rgba(255, 255, 255, 0.26);
+    --text-color: white;
+    --gradient-color-01: #2B86C5;
+    --gradient-color-02: #784BA0;
+}
+
+
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
-    width: 100%;
-    padding: 0 10px;
-    background-color: #e4e9f7;
-    min-height: 100vh;
+    background-color: var(--body-color);
     transition: var(--tran-05);
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -65,10 +95,9 @@ img {
     visibility: hidden;
 }
 
-input[type="number"]::-webkit-inner-spin-button
-{
-  -webkit-appearance: none;
-  margin: 0;
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .form-content {
@@ -107,23 +136,22 @@ input[type="number"]::-webkit-inner-spin-button
 }
 
 .input-field input:focus~label,
-.input-field input:valid~label
-{
-  font-size: 0.8rem;
-  top: 10px;
-  transform: translateY(-120%);
-  font-weight: 600;
+.input-field input:valid~label {
+    font-size: 0.8rem;
+    top: 10px;
+    transform: translateY(-120%);
+    font-weight: 600;
 }
 
 .input-field input:focus::placeholder {
-  visibility: visible;
+    visibility: visible;
 }
 
 .register-fields {
     display: flex;
     justify-content: space-around;
-   padding: 16px 0;
-   gap: 1.6rem;
+    padding: 16px 0;
+    gap: 1.6rem;
 }
 
 hr {
