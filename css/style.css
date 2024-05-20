@@ -49,19 +49,20 @@ h2 {
 
 .input-field {
   position: relative;
-  border-bottom: 2px solid #ccc;
   margin: 15px 0;
+  border-bottom: 2px solid #ccc;
 }
 
 .input-field label {
   position: absolute;
-  top: 50%;
-  left: 0;
+  top: 20%;
+  left: 10px;
   transform: translateY(-50%);
   color: #fff;
   font-size: 16px;
   pointer-events: none;
   transition: 0.15s ease;
+  z-index: 1;
 }
 
 .input-field input {
@@ -72,6 +73,14 @@ h2 {
   outline: none;
   font-size: 16px;
   color: #fff;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+.input-field:focus-within label {
+  font-size: 0.8rem;
+  top: 2px;
+  transform: translateY(0);
 }
 
 .input-field input:focus~label,
@@ -134,4 +143,11 @@ button:hover {
   text-align: center;
   margin-top: 30px;
   color: #fff;
+}
+
+.error {
+  color: red;
+  font-size: 15px;
+  display: block;
+  margin-top: 5px;
 }
