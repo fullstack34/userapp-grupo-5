@@ -10,15 +10,17 @@
 
 <body>
     <div class="container">
-        <form action="dashboard/index.html">
+        <form action="dashboard/index.html" id="form-login">
             <h2>W E B W I S E</h2>
             <div class="input-field">
-                <input type="text" required/>
-                <label>Digite seu email</label>
+                <label for="input-email" id="label-form">Digite seu email</label>
+                <input type="text" id="input-email">
+                <span class="error" id="email-error"></span>
             </div>
             <div class="input-field">
-                <input type="password" required/>
-                <label>Digite sua senha</label>
+                <label for="input-senha" id="label-form">Digite sua senha</label>
+                <input type="password" id="input-senha">
+                <span class="error" id="senha-error"></span>
             </div>
             <div class="forget">
                 <label for="Save-login">
@@ -33,6 +35,8 @@
             </div>
         </form>
     </div>
+
+    <script src="js/form-login-validation.js"></script>
 </body>
 
 </html>
