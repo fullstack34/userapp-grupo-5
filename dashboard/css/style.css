@@ -60,11 +60,11 @@ body.dark {
 }
 
 .sidebar li {
-  height: 30px;
+  height: 40px;
   list-style: none;
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 1px;
 }
 
 .sidebar .icon {
@@ -1577,8 +1577,6 @@ body.dark .home .text {
     height: 120px;
 
   }
-
-  
 
   
   .sidebar-mobile div#d2{
