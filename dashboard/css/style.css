@@ -231,7 +231,7 @@ body.dark .home .text {
 
   .home{
     display: flex;
-    padding: 0px 0px 0px 88px;
+    padding: 0px 0px 0px 0px;
   }
 
 
