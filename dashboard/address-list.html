@@ -2,70 +2,83 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/address-style.css">
-  <link rel="stylesheet" href="css/address-style-menu.css">
-  <title>Cadastro de endereço</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/address-list.css" />
+  <title>Lista de endereços</title>
 </head>
 
 <body>
+  <!-- INICIO - DASHBOARD MENU -->
   <nav class="navbar navbar-expand-sm sidebar">
+
     <div class="collapse navbar-collapse" id="nav-target">
       <div>
+
         <ul class="navbar-nav ml-auto">
+
           <li class="nav-link nav-item">
             <a href="index.html" class="nav-link">
-              <span class="text nav-text">W E B W I S E</span>
+              <span class="text nav-text">W E B W I S E</a></span>
             </a>
           </li>
+
           <li class="nav-link nav-item">
             <a href="address-form.html" class="nav-link">
               <i class="fa-regular fa-compass icon"></i>
               <span class="text nav-text">Cadastro endereço</span>
             </a>
           </li>
+
           <li class="nav-link nav-item">
             <a href="address-list.html" class="nav-link">
               <i class="fa-regular fa-address-book icon"></i>
               <span class="text nav-text">Listar endereço</span>
             </a>
           </li>
+
           <li class="nav-link nav-item">
             <a href="#" class="nav-link">
               <i class="bx bx-bell icon"></i>
               <span class="text nav-text">Notificações</span>
             </a>
           </li>
+
           <li class="nav-link nav-item">
             <a href="#" class="nav-link">
               <i class="bx bx-pie-chart-alt icon"></i>
               <span class="text nav-text">Análises</span>
             </a>
           </li>
+
           <li class="nav-link nav-item">
             <a href="#" class="nav-link">
               <i class="bx bx-heart icon"></i>
               <span class="text nav-text">Curtidas</span>
             </a>
           </li>
+
           <li class="nav-link nav-item">
             <a href="#" class="nav-link">
               <i class="bx bx-cog icon"></i>
               <span class="text nav-text">Configurações</span>
             </a>
           </li>
+
           <li class="nav-link nav-item">
             <a href="index.html" class="nav-link">
               <i class="bx bx-log-out icon"></i>
               <span class="text nav-text">Retornar</span>
             </a>
           </li>
+
           <li class="mode nav-link nav-item">
             <span class="mode-text">Modo escuro</span>
             <div class="toggle-switch">
@@ -76,63 +89,221 @@
       </div>
     </div>
   </nav>
+  <!-- FIM - DASHBOARD MENU -->
+  <div class="table-responsive">
+    <div class="d-flex justify-content-center">
+      <div class="col-8">
+        <div class="d-flex justify-content-center">
+          <div class="col-8 fs-5">
+            <table class="table table-striped table-sucess">
+              <thead>
+                <tr>
+                  <th class="text-center" scope="col">
+                    LISTAGEM DE ENDEREÇOS
+                  </th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
 
-  <div class="container">
-    <picture>
-      <img src="imagens/image.png" alt="my_location">
-    </picture>
-    <form id="addressForm" class="form-content">
-      <h1>Cadastre seu Endereço</h1>
-      <hr>
-      <div class="register-fields">
-        <div class="input-field">
-          <input type="text" name="CEP" id="cep" placeholder="XXXXX-XXX" maxlength="9" autocomplete="off">
-          <label for="cep">CEP</label>
-          <span class="erro" id="cepErro"></span>
-        </div>
-        <div class="input-field">
-          <input type="text" name="Rua" id="rua" autocomplete="off" placeholder="Rua ou Avenida">
-          <label for="rua">Rua</label>
-          <span class="erro" id="ruaErro"></span>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>#ID</th>
+                <th>CEP</th>
+                <th>Rua</th>
+                <th>Número</th>
+                <th>Complemento</th>
+                <th>Bairro</th>
+                <th>Cidade</th>
+                <th>UF</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>61601-320</td>
+                <td>Rua 1</td>
+                <td>200</td>
+                <td>Ap 300</td>
+                <td>Belém</td>
+                <td>Fortaleza</td>
+                <td>CE</td>
+                <td class="action-cell">
+                  <button class="btn btn-edit" onclick="editarEndereco(1)">
+                    Editar
+                  </button>
+                  <button class="btn btn-delete" onclick="excluirEndereco(1)">
+                    Excluir
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>61601-350</td>
+                <td>Rua A</td>
+                <td>210</td>
+                <td>Ap 310</td>
+                <td>Itambé</td>
+                <td>Caucaia</td>
+                <td>CE</td>
+                <td class="action-cell">
+                  <button class="btn btn-edit" onclick="editarEndereco(1)">
+                    Editar
+                  </button>
+                  <button class="btn btn-delete" onclick="excluirEndereco(1)">
+                    Excluir
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>61600-200</td>
+                <td>Rua B</td>
+                <td>220</td>
+                <td>Ap 320</td>
+                <td>Aldeota</td>
+                <td>Maracanau</td>
+                <td>CE</td>
+                <td class="action-cell">
+                  <button class="btn btn-edit" onclick="editarEndereco(1)">
+                    Editar
+                  </button>
+                  <button class="btn btn-delete" onclick="excluirEndereco(1)">
+                    Excluir
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>61610-230</td>
+                <td>Rua C</td>
+                <td>230</td>
+                <td>Ap 330</td>
+                <td>Meirelles</td>
+                <td>Cubatão</td>
+                <td>SP</td>
+                <td class="action-cell">
+                  <button class="btn btn-edit" onclick="editarEndereco(1)">
+                    Editar
+                  </button>
+                  <button class="btn btn-delete" onclick="excluirEndereco(1)">
+                    Excluir
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>61500-390</td>
+                <td>Rua D</td>
+                <td>240</td>
+                <td>Ap 340</td>
+                <td>Pirambu</td>
+                <td>Santos</td>
+                <td>SP</td>
+                <td class="action-cell">
+                  <button class="btn btn-edit" onclick="editarEndereco(1)">
+                    Editar
+                  </button>
+                  <button class="btn btn-delete" onclick="excluirEndereco(1)">
+                    Excluir
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>60650-200</td>
+                <td>Rua E</td>
+                <td>250</td>
+                <td>Ap 350</td>
+                <td>Itambé 2</td>
+                <td>Guarujá</td>
+                <td>CE</td>
+                <td class="action-cell">
+                  <button class="btn btn-edit" onclick="editarEndereco(1)">
+                    Editar
+                  </button>
+                  <button class="btn btn-delete" onclick="excluirEndereco(1)">
+                    Excluir
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>67800-220</td>
+                <td>Rua F</td>
+                <td>260</td>
+                <td>Ap 360</td>
+                <td>Capuan</td>
+                <td>Monguaguá</td>
+                <td>SP</td>
+                <td class="action-cell">
+                  <button class="btn btn-edit" onclick="editarEndereco(1)">
+                    Editar
+                  </button>
+                  <button class="btn btn-delete" onclick="excluirEndereco(1)">
+                    Excluir
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <div class="register-fields">
-        <div class="input-field">
-          <input type="text" name="Bairro" id="bairro" autocomplete="off" placeholder="Nome do bairro">
-          <label for="bairro">Bairro</label>
-          <span class="erro" id="bairroErro"></span>
-        </div>
-        <div class="input-field">
-          <input type="text" name="cidade" id="cidade" autocomplete="off" placeholder="Ex.: (Fortaleza)">
-          <label for="cidade">Cidade</label>
-          <span class="erro" id="cidadeErro"></span>
-        </div>
-      </div>
-      <div class="register-fields">
-        <div class="input-field">
-          <input type="text" name="Uf" id="uf" placeholder="XX" maxlength="2" autocomplete="off">
-          <label for="uf">UF</label>
-          <span class="erro" id="ufErro"></span>
-        </div>
-        <div class="input-field">
-          <input type="text" name="numero" id="numero" placeholder="Número" autocomplete="off">
-          <label for="numero">Número</label>
-          <span class="erro" id="numeroErro"></span>
-        </div>
-      </div>
-      <div class="input-field">
-        <input type="text" name="complemento" id="complement" placeholder="Casa, Apto, Loja" autocomplete="off">
-        <label for="complement">Complemento (Opcional)</label>
-      </div>
-      <button type="submit">Cadastrar</button>
-    </form>
+    </div>
+    <nav class="mt-2">
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" href="#">
+            <span>&laquo;</span>
+            <span class="sr-only">Anterior</span>
+          </a>
+        </li>
+        <li class="page-item active">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">4</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">
+            <span>&raquo;</span>
+            <span class="sr-only">Próximo</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
 
+  <script>
+    function editarEndereco(id) {
+      console.log("Editar endereço com ID:", id);
+      alert("Editar endereço com ID: " + id);
+    }
+
+    function excluirEndereco(id) {
+      console.log("Excluir endereço com ID:", id);
+      if (
+        confirm(
+          "Tem certeza que deseja excluir o endereço com ID " + id + "?"
+        )
+      ) {
+        alert("Endereço com ID " + id + " excluído com sucesso!");
+      }
+    }
+  </script>
   <script src="js/script.js"></script>
-  <script src="js/address-form-validation.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>
