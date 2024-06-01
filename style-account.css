@@ -22,7 +22,7 @@ body {
     content: "";
     position: absolute;
     width: 100%;
-    height: 102vh;
+    height: 105vh;
     background: url(Imagens/Background.jpg), #000;
     background-position: center;
     background-attachment: fixed;
