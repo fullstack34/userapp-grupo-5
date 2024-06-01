@@ -9,35 +9,52 @@
 </head>
 <body>
     <div class="container-form">
-        <form action="" method="post">
+        <form id="formulario" action="login.html" method="post">
             <h1>W E B W I S E</h1>
             <h2>Crie sua conta</h2>
-        <div class="input-field">
+        <div class="input-field" id="inpNome">
             <input type="text" name="nome" id="name" placeholder="Insira seu nome" autocomplete="off">
             <label for="name">Nome</label>
         </div>
-        <div class="input-field">
-            <input type="text" name="sobrenome" id="lastname" autocomplete="off" placeholder="(opcional)">
+        <span class="erro" id="nomeErro"></span>
+
+        <div class="input-field" id="inpSobrenome">
+            <input type="text" name="sobrenome" id="lastname" autocomplete="off" placeholder="Insira seu sobrenome">
             <label for="lastname">Sobrenome</label>
         </div>
-        <div class="input-field">
-            <input type="text" name="email" id="email" autocomplete="off" required>
+        <span class="erro" id="sobrenomeErro"></span>
+
+
+        <div class="input-field" id="inpEmail">
+            <input type="text" name="email" id="email" autocomplete="off" placeholder="Digite seu email">
             <label>E-mail</label>
         </div>
-        <div class="input-field">
-            <input type="password" name="senha" id="password" autocomplete="off" required>
-            <label for="password">Nova senha</label>
+        <span class="erro" id="emailErro"></span>
+
+
+        <div class="input-field" id="inpSenha">
+            <input type="password" name="senha" id="password" autocomplete="off" placeholder="Digite uma senha">
+            <label>Nova senha</label>
         </div>
-        <div class="input-field">
-            <input type="password" id="confirm_password" autocomplete="off" required>
-            <label for="password">Confirmar senha</label>
+        <span class="erro" id="senhaErro"></span>
+
+
+        <div class="input-field" id="inpConfirmarSenha">
+            <input type="password" id="confirm_password" autocomplete="off"
+            placeholder="Repetir senha">
+            <label>Confirmar senha</label>
         </div>
+        <span class="erro" id="ConfirmErro"></span>
+
+
         <div class="termos-de-uso">
-            <input type="checkbox" required> <p>Ao continuar, você deve aceita nossa <a href="">Política de Privacidade</a> e <a href="">Termos de Uso</a></p>
+            <input type="checkbox"> <p id="termosErro">Ao continuar, você deve aceita nossa <a href="">Política de Privacidade</a> e <a href="">Termos de Uso</a></p>
         </div>
             <button>Cadastra-se</button>
             <p><a href="login.html">Fazer login</a> usando uma conta já cadastrada!</p>
         </form>
     </div>
+
+    <script src="js/create-account.js"></script>
 </body>
 </html>
