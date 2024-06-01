@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    /* font-family: "Open Sans", sans-serif; */
+}
+
+:root {
+    /* ===== Cores ===== */
+    --body-color: #e4e9f7;
+    --sidebar-color: #fff;
+    --primary-color2: #ffffff;
+    --primary-color-light: #f6f5ff;
+    --toggle-color: rgb(20, 20, 20);
+    --switch-mode-color: #ddd;
+    --toggle-color-light: rgb(95, 95, 95);
+    --shadow-box-color: rgba(0, 0, 0, 0.26);
+    --text-color: #707070;
+    --gradient-color-01: #E0C3FC;
+    --gradient-color-02: #8EC5FC;
+
+
+    /* ====== Transição ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body.dark {
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --switch-mode-color: rgb(245, 245, 245);
+    --toggle-color-light: #fff;
+    --shadow-box-color: rgba(255, 255, 255, 0.26);
+    --text-color: white;
+    --gradient-color-01: #2B86C5;
+    --gradient-color-02: #784BA0;
+}
+
+
+body {
+    min-height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 850px;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--toggle-color);
+    -webkit-box-shadow: 14px 12px 5px -5px var(--shadow-box-color);
+    -moz-box-shadow: 14px 12px 5px -5px var(--shadow-box-color);
+    box-shadow: 14px 12px 5px -5px var(--shadow-box-color);
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px;
+    width: 550px;
+}
+
+picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(62deg, var(--gradient-color-01), var(--gradient-color-02));
+    background-size: cover;
+    height: 600px;
+    width: 50%;
+}
+
+img {
+    height: 350px;
+}
+
+::placeholder {
+    color: transparent;
+    font-style: italic;
+    opacity: 45%;
+    color: var(--toggle-color-light);
+    visibility: hidden;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-field {
+    position: relative;
+    margin: 12.5px 0;
+}
+
+.input-field input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #707070;
+    outline: none;
+    font-size: 16px;
+    color: var(--toggle-color);
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: var(--toggle-color-light);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.15s ease;
+}
+
+.input-field input:focus~label,
+.input-field input:valid~label {
+    font-size: 0.8rem;
+    top: 10px;
+    transform: translateY(-120%);
+    font-weight: 600;
+}
+
+.input-field input:focus::placeholder {
+    visibility: visible;
+}
+
+.register-fields {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px 0;
+    gap: 1.6rem;
+}
+
+hr {
+    margin: 3.5px 0 0 0;
+    width: 45%;
+    border: 2px solid #e4e9f7;
+}
+
+button {
+    background: var(--toggle-color);
+    color: #7c7878;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+    margin: 20px 0 25px 0;
+}
+
+button:hover {
+    background-color: var(--text-color);
+    width: 102%;
+    color: var(--primary-color-light);
+}
+
+.erro {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block;
+}
