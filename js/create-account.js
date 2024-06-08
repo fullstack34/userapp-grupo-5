@@ -162,11 +162,6 @@ if (!inputChecked.checked) {
 if(!indentificarError) {
     form.submit()
 
-    const dados = [
-        inputEmail.value,
-        inputSenha.value,
-    ]
-
-    window.localStorage.setItem(inputNome.value+inputSobrenome.value,JSON.stringify(dados));
+    window.localStorage.setItem(inputEmail.value,inputSenha.value);
     
 }});
