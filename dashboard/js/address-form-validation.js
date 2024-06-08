@@ -87,13 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
         numeroErro.classList.add('erro');
 
         if (!isValid) {
-            window.localStorage.removeItem('Cep', cepField.value);
-            window.localStorage.removeItem('Rua', ruaField.value);
-            window.localStorage.removeItem('Bairro', bairroField.value);
-            window.localStorage.removeItem('Cidade', cidadeField.value);
-            window.localStorage.removeItem('UF', ufField.value);
-            window.localStorage.removeItem('Numero', numeroField.value);
-            window.localStorage.removeItem('Complemento', complementoField.value);
             e.preventDefault();
         }
     });
