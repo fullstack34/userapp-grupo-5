@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     addressForm.addEventListener('submit', (e) => {
         let isValid = true;
+        
+        window.localStorage.removeItem('todo-list')
 
         cepErro.textContent = '';
         ruaErro.textContent = '';
@@ -36,27 +38,46 @@ document.addEventListener('DOMContentLoaded', () => {
         if (cepField.value.length < 9) {
             cepErro.textContent = 'O CEP deve conter no mínimo 8 caracteres.';
             isValid = false;
+        } else {
+            window.localStorage.setItem('Cep', cepField.value)
         }
         if (ruaField.value.trim() === '') {
             ruaErro.textContent = 'Campo obrigatório.';
             isValid = false;
-        }
+        } else {
+            window.localStorage.setItem('Rua', ruaField.value)
+        } 
+
         if (bairroField.value.trim() === '') {
             bairroErro.textContent = 'Campo obrigatório.';
             isValid = false;
-        }
+        } else {
+            window.localStorage.setItem('Bairro', bairroField.value)
+        } 
+
         if (cidadeField.value.trim() === '') {
             cidadeErro.textContent = 'Campo obrigatório.';
             isValid = false;
-        }
+        }else {
+            window.localStorage.setItem('Cidade', cidadeField.value)
+        } 
+
         if (ufField.value.trim().length !== 2) {
             ufErro.textContent = 'UF deve conter 2 caracteres.';
             isValid = false;
-        }
+        }else {
+            window.localStorage.setItem('UF', ufField.value)
+        } 
+
         if (numeroField.value.trim() === '') {
             numeroErro.textContent = 'Campo obrigatório.';
             isValid = false;
+        }else {
+            window.localStorage.setItem('Numero', numeroField.value)
+        } if (complementoField.value) {
+            window.localStorage.setItem('Complemento', complementoField.value)
         }
+
 
         cepErro.classList.add('erro');
         ruaErro.classList.add('erro');
@@ -66,6 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
         numeroErro.classList.add('erro');
 
         if (!isValid) {
+            window.localStorage.removeItem('Cep', cepField.value);
+            window.localStorage.removeItem('Rua', ruaField.value);
+            window.localStorage.removeItem('Bairro', bairroField.value);
+            window.localStorage.removeItem('Cidade', cidadeField.value);
+            window.localStorage.removeItem('UF', ufField.value);
+            window.localStorage.removeItem('Numero', numeroField.value);
+            window.localStorage.removeItem('Complemento', complementoField.value);
             e.preventDefault();
         }
     });
