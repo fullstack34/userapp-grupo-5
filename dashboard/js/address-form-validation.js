@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isValid = false;
         }else {
             window.localStorage.setItem('UF', ufField.value)
-        } 
+                } 
 
         if (numeroField.value.trim() === '') {
             numeroErro.textContent = 'Campo obrigatório.';
