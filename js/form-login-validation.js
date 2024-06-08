@@ -41,6 +41,7 @@ document.getElementById('form-login').addEventListener('submit', (event) => {
         }else {
             console.log('valido')
             document.getElementById('form-login').submit();
+            window.localStorage.setItem('logged-in', true)
         }
         
 
