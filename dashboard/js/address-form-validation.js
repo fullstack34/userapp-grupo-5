@@ -26,7 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
     addressForm.addEventListener('submit', (e) => {
         let isValid = true;
         
-        window.localStorage.removeItem('todo-list')
+        let taskList = window.localStorage.getItem('todo-list') ?? '[]';
+        taskList = JSON.parse(taskList);
+            
 
         cepErro.textContent = '';
         ruaErro.textContent = '';
@@ -35,47 +37,42 @@ document.addEventListener('DOMContentLoaded', () => {
         ufErro.textContent = '';
         numeroErro.textContent = '';
 
+        let ceptask = cepField.value;
+        let ruatask = ruaField.value;
+        let bairrotask = bairroField.value;
+        let cidadetask = cidadeField.value;
+        let uftask = ufField.value;
+        let numerotask = numeroField.value;
+        let complementtask = complementoField.value;
+
         if (cepField.value.length < 9) {
             cepErro.textContent = 'O CEP deve conter no mínimo 8 caracteres.';
             isValid = false;
-        } else {
-            window.localStorage.setItem('Cep', cepField.value)
-        }
+        } 
+
         if (ruaField.value.trim() === '') {
             ruaErro.textContent = 'Campo obrigatório.';
             isValid = false;
-        } else {
-            window.localStorage.setItem('Rua', ruaField.value)
         } 
 
         if (bairroField.value.trim() === '') {
             bairroErro.textContent = 'Campo obrigatório.';
             isValid = false;
-        } else {
-            window.localStorage.setItem('Bairro', bairroField.value)
         } 
 
         if (cidadeField.value.trim() === '') {
             cidadeErro.textContent = 'Campo obrigatório.';
             isValid = false;
-        }else {
-            window.localStorage.setItem('Cidade', cidadeField.value)
-        } 
+        }
 
         if (ufField.value.trim().length !== 2) {
             ufErro.textContent = 'UF deve conter 2 caracteres.';
             isValid = false;
-        }else {
-            window.localStorage.setItem('UF', ufField.value)
-                } 
+        }
 
         if (numeroField.value.trim() === '') {
             numeroErro.textContent = 'Campo obrigatório.';
             isValid = false;
-        }else {
-            window.localStorage.setItem('Numero', numeroField.value)
-        } if (complementoField.value) {
-            window.localStorage.setItem('Complemento', complementoField.value)
         }
 
 
@@ -88,6 +85,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!isValid) {
             e.preventDefault();
+            
+        } else {
+
+            taskList.push({
+                CEP: ceptask, Rua: ruatask, Bairro: bairrotask, 
+                Cidade: cidadetask, UF: uftask, numero: 
+               numerotask, Complemento: complementtask })
+    
+            window.localStorage.setItem('todo-list', JSON.stringify(taskList));       
+            
         }
     });
 });
