@@ -51,134 +51,7 @@
                 <th>Ações</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>61601-320</td>
-                <td>Rua 1</td>
-                <td>200</td>
-                <td>Ap 300</td>
-                <td>Belém</td>
-                <td>Fortaleza</td>
-                <td>CE</td>
-                <td class="action-cell">
-                  <button class="btn btn-edit" onclick="editarEndereco(1)">
-                    Editar
-                  </button>
-                  <button class="btn btn-delete" onclick="excluirEndereco(1)">
-                    Excluir
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>61601-350</td>
-                <td>Rua A</td>
-                <td>210</td>
-                <td>Ap 310</td>
-                <td>Itambé</td>
-                <td>Caucaia</td>
-                <td>CE</td>
-                <td class="action-cell">
-                  <button class="btn btn-edit" onclick="editarEndereco(1)">
-                    Editar
-                  </button>
-                  <button class="btn btn-delete" onclick="excluirEndereco(1)">
-                    Excluir
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>61600-200</td>
-                <td>Rua B</td>
-                <td>220</td>
-                <td>Ap 320</td>
-                <td>Aldeota</td>
-                <td>Maracanau</td>
-                <td>CE</td>
-                <td class="action-cell">
-                  <button class="btn btn-edit" onclick="editarEndereco(1)">
-                    Editar
-                  </button>
-                  <button class="btn btn-delete" onclick="excluirEndereco(1)">
-                    Excluir
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>61610-230</td>
-                <td>Rua C</td>
-                <td>230</td>
-                <td>Ap 330</td>
-                <td>Meirelles</td>
-                <td>Cubatão</td>
-                <td>SP</td>
-                <td class="action-cell">
-                  <button class="btn btn-edit" onclick="editarEndereco(1)">
-                    Editar
-                  </button>
-                  <button class="btn btn-delete" onclick="excluirEndereco(1)">
-                    Excluir
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>61500-390</td>
-                <td>Rua D</td>
-                <td>240</td>
-                <td>Ap 340</td>
-                <td>Pirambu</td>
-                <td>Santos</td>
-                <td>SP</td>
-                <td class="action-cell">
-                  <button class="btn btn-edit" onclick="editarEndereco(1)">
-                    Editar
-                  </button>
-                  <button class="btn btn-delete" onclick="excluirEndereco(1)">
-                    Excluir
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>60650-200</td>
-                <td>Rua E</td>
-                <td>250</td>
-                <td>Ap 350</td>
-                <td>Itambé 2</td>
-                <td>Guarujá</td>
-                <td>CE</td>
-                <td class="action-cell">
-                  <button class="btn btn-edit" onclick="editarEndereco(1)">
-                    Editar
-                  </button>
-                  <button class="btn btn-delete" onclick="excluirEndereco(1)">
-                    Excluir
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>67800-220</td>
-                <td>Rua F</td>
-                <td>260</td>
-                <td>Ap 360</td>
-                <td>Capuan</td>
-                <td>Monguaguá</td>
-                <td>SP</td>
-                <td class="action-cell">
-                  <button class="btn btn-edit" onclick="editarEndereco(1)">
-                    Editar
-                  </button>
-                  <button class="btn btn-delete" onclick="excluirEndereco(1)">
-                    Excluir
-                  </button>
-                </td>
-              </tr>
-            </tbody>
+            <tbody id="address-list"></tbody>
           </table>
         </div>
       </div>
@@ -212,25 +85,8 @@
       </ul>
     </nav>
   </div>
-
-  <script>
-    function editarEndereco(id) {
-      console.log("Editar endereço com ID:", id);
-      alert("Editar endereço com ID: " + id);
-    }
-
-    function excluirEndereco(id) {
-      console.log("Excluir endereço com ID:", id);
-      if (
-        confirm(
-          "Tem certeza que deseja excluir o endereço com ID " + id + "?"
-        )
-      ) {
-        alert("Endereço com ID " + id + " excluído com sucesso!");
-      }
-    }
-  </script>
   <script src="components/Menu.js" type="module"></script>
+  <script src="js/address-list-validation.js"></script>
   <script src="js/script.js" type="module"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
