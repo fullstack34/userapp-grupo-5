@@ -1,3 +1,7 @@
+if(!window.localStorage.getItem('logged-in')){
+    window.localStorage.setItem('logged-in',false)
+}
+
 document.getElementById('form-login').addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -39,9 +43,8 @@ document.getElementById('form-login').addEventListener('submit', (event) => {
             console.log('invalido')
             document.getElementById('senhaemail').style.display = 'flex'
         }else {
-            console.log('valido')
             document.getElementById('form-login').submit();
-            window.localStorage.setItem('logged-in', true)
+            window.localStorage.setItem('logged-in',true)
         }
         
 
