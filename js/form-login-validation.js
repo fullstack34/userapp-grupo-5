@@ -1,3 +1,7 @@
+if(!window.localStorage.getItem('logged-in')){
+    window.localStorage.setItem('logged-in',false)
+}
+
 document.getElementById('form-login').addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -8,6 +12,7 @@ document.getElementById('form-login').addEventListener('submit', (event) => {
 
     emailError.textContent = '';
     senhaError.textContent = '';
+    document.getElementById('senhaemail').style.display = 'none'
 
     let senhaLength = senhaInput.value.length;
     let hasError = false;
@@ -34,7 +39,15 @@ document.getElementById('form-login').addEventListener('submit', (event) => {
     }
 
     if (!hasError) {
-        document.getElementById('form-login').submit();
+        if (!window.localStorage.getItem(emailInput.value)||window.localStorage.getItem(emailInput.value) !== String(senhaInput.value)){
+            console.log('invalido')
+            document.getElementById('senhaemail').style.display = 'flex'
+        }else {
+            document.getElementById('form-login').submit();
+            window.localStorage.setItem('logged-in',true)
+        }
+        
+
     }
 });
 
@@ -46,3 +59,6 @@ document.getElementById('input-email').addEventListener('focus', function () {
 document.getElementById('input-senha').addEventListener('focus', function () {
     document.getElementById('senha-error').textContent = '';
 });
+
+
+
