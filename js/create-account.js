@@ -161,8 +161,7 @@ if (!inputChecked.checked) {
 
 if(!indentificarError) {
     form.submit()
-}
 
-
-});
-
+    window.localStorage.setItem(inputEmail.value,JSON.stringify({'nome':inputNome.value,'sobreNome':inputSobrenome.value , 'senha':inputSenha.value}));
+    
+}});
