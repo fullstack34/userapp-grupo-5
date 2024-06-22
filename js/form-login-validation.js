@@ -39,7 +39,7 @@ document.getElementById('form-login').addEventListener('submit', (event) => {
     }
 
     if (!hasError) {
-        if (!window.localStorage.getItem(emailInput.value)||window.localStorage.getItem(emailInput.value) !== String(senhaInput.value)){
+        if (!window.localStorage.getItem(emailInput.value)||JSON.parse(window.localStorage.getItem(emailInput.value)).senha !== String(senhaInput.value)){
             console.log('invalido')
             document.getElementById('senhaemail').style.display = 'flex'
         }else {
