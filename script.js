@@ -22,3 +22,4 @@ modeSwitch.addEventListener("click", () => {
     modeText.innerText = "Modo escuro";
   }
 });
+y

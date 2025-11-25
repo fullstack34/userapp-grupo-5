@@ -46,7 +46,7 @@ export default function MenuHtml() {
                             </a>
                         </li>
                         <li class="nav-link nav-item">
-                            <a href="../index.html" class="nav-link">
+                            <a href="../index.html" class="nav-link" id="retorna">
                                 <i class="bx bx-log-out icon"></i>
                                 <span class="text nav-text">Retornar</span>
                             </a>
